@@ -4,7 +4,7 @@ This is a fork of LiveCloudKd, which was early developed by Matt Suiche [(www.ms
 
 LiveCloudKd is a tool, that allows you to connect to a Hyper-V guest VM with kd.exe (or WinDBG and WinDBG with a modern UI). 
 
-Also, you can use the LiveCloudKd EXDi plugin for attaching to Hyper-V VM.  
+Also, you can use the LiveCloudKd EXDI plugin for attaching to Hyper-V VM.  
 
 The tool uses Hyper-V Memory Manager plugin for operations with Hyper-V memory.
 The tool has additional options in comparison with LiveKd from Microsoft Sysinternals Suite:
@@ -22,7 +22,7 @@ Contains EXDI plugin for static dump view:
 
 LiveCloudKd is based on the hvlib.dll library (Hyper-V Memory Manager plugin). Other tools, that were developed using this library:
 
-LiveCloudKd EXDi debugger. [Download](https://github.com/gerhart01/LiveCloudKd/releases/download/v1.0.22021109/LiveCloudKd.EXDi.debugger.v1.0.22021109.zip). [Readme](https://github.com/gerhart01/LiveCloudKd/blob/master/ExdiKdSample/LiveDebugging.md)  
+LiveCloudKd EXDI debugger. [Download](https://github.com/gerhart01/LiveCloudKd/releases/download/v1.0.22021109/LiveCloudKd.EXDI.debugger.v1.0.22021109.zip). [Readme](https://github.com/gerhart01/LiveCloudKd/blob/master/EXDIKdSample/LiveDebugging.md)  
 Hyper-V Virtual Machine plugin for MemProcFS. [Download](https://github.com/gerhart01/LiveCloudKd/releases/download/v1.5.20241221/leechcore_hyperv_plugin_21.12.2024.zip)  
 Hyper-V Memory Manager plugin for volatility. [Download](https://github.com/gerhart01/Hyper-V-Tools/releases/download/v1.0.20240427/Hyper-V.Memory.Manager.plugin.for.volatility.v1.0.20240427.zip)  
 HyperViews. [Download](https://github.com/gerhart01/Hyper-V-Tools/tree/main/HyperViews)  
@@ -89,7 +89,7 @@ Performance comparison with LiveKd from Sysinternals Suite (LiveCloudKd is more 
 You can view Windows securekernel address space in static mode of Hyper-V VM with VBS enabled option in guest OS.
 
 1. Launch Hyper-V VM with guest OS VBS enable;
-2. Launch LiveCloudKd in EXDi mode;
+2. Launch LiveCloudKd in EXDI mode;
 3. Enter ".reload /f securekernel.exe=<addr>" to get securekernel symbols information. You can see securekernel image base address in output window.
 
 ![](images/image04.png)
@@ -99,7 +99,7 @@ LiveCloudKd options:
 ``` 
  /a         Pre-selected action.
                   0 - Live kernel debugging
-                  1 - Start EXDi plugin (WinDBG)
+                  1 - Start EXDI plugin (WinDBG)
                   2 - Produce a linear physical memory dump
                   3 - Produce a Microsoft full memory crash dump
                   4 - Dump guest OS memory chunk
